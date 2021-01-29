@@ -1,11 +1,7 @@
 name: TypeScript Linting and Compilation Check
 
-on:
-  # Triggers the workflow on push events
-  push:
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+# Triggers the workflow on push or pull request events
+on: [push, pull_request]
 
 jobs:
   # Runs the eslint service to check low-level code readability
