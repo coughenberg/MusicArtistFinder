@@ -17,10 +17,8 @@ jobs:
 
     - name: npm install
       run: npm install
-    - name: yarn install
-      run: yarn install
-    - name: yarn install typescript and ts eslint
-      run: yarn add -D typescript @typescript-eslint/parser
+    - name: npm install typescript and ts eslint
+      run: npm install typescript @typescript-eslint/parser
     - name: eslint
       uses: icrawl/action-eslint@v1
       with:
@@ -36,12 +34,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12
-    - name: yarn install
-      run: yarn install
-    - name: yarn install ts
-      run: yarn add typescript
-    - name: yarn install ts compiler
-      run: yarn add tsc
+    - name: npm install
+      run: npm install
+    - name: npm install ts
+      run: npm install typescript
+    - name: npm install ts compiler
+      run: npm install tsc
     - name: tsc
       uses: icrawl/action-tsc@v1
 
