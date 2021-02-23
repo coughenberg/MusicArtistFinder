@@ -1,0 +1,45 @@
+name: TypeScript Linting and Compilation Check
+
+# Triggers the workflow on push or pull request events
+on: [push, pull_request]
+
+jobs:
+  # Runs the eslint service to check low-level code readability
+  eslint:
+    name: eslint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: install node v12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+
+    - name: npm install
+      run: npm install
+    - name: npm install typescript and ts eslint
+      run: npm install typescript @typescript-eslint/parser
+    - name: eslint
+      uses: icrawl/action-eslint@v1
+      with:
+        custom-glob: src
+
+  # Checks that the code compiles the TypeScript
+  tsc:
+    name: TypeScript Compiler
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: install node v12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: npm install
+      run: npm install
+    - name: npm install ts
+      run: npm install typescript
+    - name: npm install ts compiler
+      run: npm install tsc
+    - name: tsc
+      uses: icrawl/action-tsc@v1
+
