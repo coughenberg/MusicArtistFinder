@@ -1,0 +1,13 @@
+{
+    "SeatGeek": {
+      "ClientId": "MjE0OTI5NjR8MTYxMDQxNTkxNC40MDAwMjQ3",
+      "baseUrl": "https://api.seatgeek.com/2/"
+    },
+    "SetList": {
+      "ClientId": "z8PDK3MdqQLhUFZGpeunECs7Nzg5Vw1eAq0w",
+      "baseUrl": "https://api.setlist.fm/rest/1.0/"
+    },
+    "App": {
+      "Port": "3001"
+    }
+}
